@@ -5,7 +5,7 @@
   &.lined {
     border-bottom: 1px solid $smoke;
 
-    @media #{$medium-up} {
+    @include breakpoint(medium up) {
       border-bottom: 1px solid $gainsboro;
       margin-bottom: 1rem; 
     }
@@ -13,7 +13,7 @@
 
   // re-written for accordion directive
   &.wide {
-    @media #{$medium-up} {
+    @include breakpoint(medium up) {
       padding-top: .9375rem;
       margin: 0 .9375rem;
       margin-bottom: 1rem;
@@ -35,7 +35,7 @@
   .stats-card {
     background: $mist;
 
-    @media #{$medium-up} {
+    @include breakpoint(medium up) {
       background: $white;
     }  
   } 
@@ -52,7 +52,7 @@
   .content-panel {
     padding-top: 0;
     
-    @media #{$medium-up} {
+    @include breakpoint(medium up) {
       @include grid-column(6);
 
       &:nth-child(2n+1) {
@@ -62,12 +62,12 @@
   }
 
   .panel-header {
-    @include panel();
+    // @include panel();
     background-color: $mist;
     border: none;
   }
 
-  @media #{$medium-up} {
+  @include breakpoint(medium up) {
     padding-top: .9375rem;
     margin: 0 .9375rem;
     margin-bottom: 2rem;
@@ -80,7 +80,7 @@
   padding-bottom: 2rem;
   margin-bottom: 2.5rem;
 
-  @media #{$medium-up} {
+  @include breakpoint(medium up) {
     background-color: $white;
     margin-bottom: 0;
     padding-bottom: 0;
@@ -89,7 +89,7 @@
   .option-group {
     padding: 1rem 1rem 0;
 
-    @media #{$medium-up} {
+    @include breakpoint(medium up) {
       border-bottom: 1px solid $steel;
     }  
   }

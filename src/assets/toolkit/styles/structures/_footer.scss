@@ -4,7 +4,7 @@
   }
 
   .inline-list {
-    @media #{$small-only} {
+    @include breakpoint(small only) {
       margin-top: 1rem;
 
       width: -webkit-fit-content;
@@ -17,7 +17,7 @@
        }     
     }
 
-    @media #{$medium-up} {
+    @include breakpoint(medium up) {
       float: right;
     }
   }

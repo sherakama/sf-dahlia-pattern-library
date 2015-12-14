@@ -78,18 +78,18 @@
       margin-bottom: 0;
     }
 
-    @media #{$medium-up} {
+    @include breakpoint(medium up) {
       @include absolute(null,0,0,null);
       float: none;
     }  
   }
 
-  @media #{$small-only} {
+  @include breakpoint(small only) {
     max-width: rem-calc(480);
     margin: 0 auto;
   }
 
-  @media #{$medium-up} {
+  @include breakpoint(medium up) {
     @include grid-row();
 
     .overlay {

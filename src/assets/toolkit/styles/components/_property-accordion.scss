@@ -17,7 +17,7 @@
   // re-written for accordion directive
   > .accordion > dd > a,
   .accordion-header.lead {
-    @media #{$medium-up} {
+    @include breakpoint(medium up) {
       display: none !important;
     }
 
@@ -36,19 +36,19 @@
     // re-written for accordion directive
   > .accordion > dd > .content,
   .content-section {
-    @media #{$medium-up} {
+    @include breakpoint(medium up) {
       display: block !important;
       padding: 0;
     }
   }
 
   .content-section {
-    @media #{$medium-up} {
+    @include breakpoint(medium up) {
       background-color: $dust;
     }
 
     p.t-small {
-      @media #{$medium-up} {
+      @include breakpoint(medium up) {
         color: $charcoal !important
       }
     }
@@ -79,7 +79,7 @@
       padding-left: 0;
       position: relative;
 
-      @media #{$medium-up} {
+      @include breakpoint(medium up) {
         color: $primary
       }
     }

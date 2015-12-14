@@ -1,5 +1,5 @@
 .welcome-block {
-  @media #{$medium-up} {
+  @include breakpoint(medium up) {
     padding-top: 4rem;
   }  
 }
@@ -8,7 +8,7 @@
   @extend .row;
   display: table;
 
-  @media #{$medium-up} {
+  @include breakpoint(medium up) {
     max-width: none;
 
     .medium-6 {

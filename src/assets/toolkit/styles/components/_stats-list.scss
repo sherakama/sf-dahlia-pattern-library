@@ -73,7 +73,7 @@
     width: 100% !important;
   }
 
-  @media #{$small-only} {
+  @include breakpoint(small only) {
     &.double.toggler {
       li:first-of-type {
         width: 33.3333%;
@@ -85,7 +85,7 @@
     }
   }  
 
-  @media #{$medium-up} {
+  @include breakpoint(medium up) {
     &.medium-full {
       li {
         width: 100%;
@@ -115,7 +115,7 @@
     }
   }
 
-  @media #{$medium-up} {
+  @include breakpoint(medium up) {
     .medium-center {
       text-align: center;
     }

@@ -47,13 +47,13 @@
   &_action {
     padding: 1rem;
 
-    @media #{$medium-up} {
+    @include breakpoint(medium up) {
       padding-bottom: 0;
     }  
   }
 
   .action-group {
-    @media #{$medium-up} {
+    @include breakpoint(medium up) {
       .date {
         padding-top: 1rem;
       }

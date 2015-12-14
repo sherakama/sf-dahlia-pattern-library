@@ -18,17 +18,17 @@ $align-class-names:
   xxlarge;
 
 // Text alignment breakpoints
-$align-class-breakpoints:
-  $small-only,
-  $small-up,
-  $medium-only,
-  $medium-up,
-  $large-only,
-  $large-up,
-  $xlarge-only,
-  $xlarge-up,
-  $xxlarge-only,
-  $xxlarge-up;
+// $align-class-breakpoints:
+//   $small-only,
+//   $small-up,
+//   $medium-only,
+//   $medium-up,
+//   $large-only,
+//   $large-up,
+//   $xlarge-only,
+//   $xlarge-up,
+//   $xxlarge-only,
+//   $xxlarge-up;
   
 // Generates text align and justify classes
 @mixin align-classes{
@@ -47,12 +47,12 @@ $align-class-breakpoints:
   }
 }
 
-@include exports("type") {
-  @if $include-html-type-classes {
-    // Responsive Text alignment
-    @include align-classes;
-  }
-}
+// @include exports("type") {
+//   @if $include-html-type-classes {
+//     // Responsive Text alignment
+//     @include align-classes;
+//   }
+// }
 
 $type-weight: (
   light: 300,

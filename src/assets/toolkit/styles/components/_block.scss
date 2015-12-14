@@ -9,7 +9,7 @@
   &--tall {
     padding: 2rem;
       
-    @media #{$medium-up} {
+    @include breakpoint(medium up) {
       padding: 6rem 2rem;
     }
   }
@@ -17,7 +17,7 @@
   &--icon {
     padding: 2rem;
       
-    @media #{$medium-up} {
+    @include breakpoint(medium up) {
       padding: 4rem 2rem 6rem 2rem;
     }
   }
@@ -33,7 +33,7 @@
   padding-bottom: .5rem;
 
   .button-on-small {
-    @media #{$small-only} {
+    @include breakpoint(small only) {
       padding-left: 1rem;
       padding-right: 1rem;
     }  

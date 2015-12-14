@@ -173,7 +173,7 @@ button,
 }
 
 .expand-small {
-  @media #{$small-only} {
+  @include breakpoint(small only) {
     width: 100%;
   }  
 }
@@ -183,7 +183,7 @@ button,
   padding-top: .5rem;
   padding-bottom: .5rem;
 
-  @media #{$small-only} {
+  @include breakpoint(small only) {
     @include button;
     svg {
       use { 

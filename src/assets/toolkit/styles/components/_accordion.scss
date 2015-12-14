@@ -13,7 +13,7 @@
   }
 
   &.trigger-left {
-    @media #{$medium-up} {
+    @include breakpoint(medium up) {
       .accordion-navigation a {
         padding-left: 2.5rem;
       }

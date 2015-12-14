@@ -27,7 +27,7 @@
       padding-left: 1rem;
       padding-right: 1rem;
 
-      @media #{$medium-up} {
+      @include breakpoint(medium up) {
         margin-left: -2rem;
         margin-right: -2rem;
         padding-left: 2rem;
@@ -55,7 +55,7 @@
     padding-left: 1rem;
     padding-right: 1rem;
 
-    @media #{$medium-up} {
+    @include breakpoint(medium up) {
       margin-left: -3rem;
       margin-right: -3rem;
       padding-left: 2rem;

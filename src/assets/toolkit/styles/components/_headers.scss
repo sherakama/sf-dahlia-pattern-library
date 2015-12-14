@@ -12,13 +12,13 @@
 .lead-header {
   padding: 1rem 0 0;
 
-  @media #{$medium-up} {
+  @include breakpoint(medium up) {
     padding: 2rem 0 1rem;
   }
 }
 
 .shift {
-  @media #{$medium-up} {
+  @include breakpoint(medium up) {
     &-offset--bottom {
       padding-bottom: 4rem;
     }
@@ -35,7 +35,7 @@
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
 
-  @media #{$small-only} {
+  @include breakpoint(small only) {
     margin-left: -($column-gutter/2);
     margin-right: -($column-gutter/2);
     padding-left: $column-gutter/2;
@@ -55,7 +55,7 @@
     padding-left: 2rem;
   }
 
-  @media #{$small-only} {
+  @include breakpoint(small only) {
     margin-left: -($column-gutter/2);
     margin-right: -($column-gutter/2);
     padding-left: $column-gutter/2;

@@ -16,7 +16,7 @@ var $ = require('jquery/dist/jquery.min.js');
 
 window.jQuery = $;
 
-var foundation = require('foundation-sites/dist/foundation.min.js');
+var foundation = require('foundation-sites/js/foundation.core.js');
 
 //require('smoothstate/jquery.smoothState.min.js');
 // var smoothState = require('./jquery.smoothState.min.js');

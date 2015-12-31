@@ -2,10 +2,12 @@
 // Toolkit styles
 //
 
+// Sass utilities
+@import 'vendors/foundation/util/util';
+
 // @import "settings";
 @import "base/variables";
 // @import "vendors/normalize";
-// @import "vendors/foundation/settings/settings";
 @import "vendors/foundation";
 
 @import "vendors/compass";

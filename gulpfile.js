@@ -16,7 +16,7 @@ var runSequence = require('run-sequence');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var webpack = require('webpack');
-
+var slim = require("gulp-slim");
 
 // configuration
 var config = {
@@ -47,6 +47,15 @@ gulp.task('clean', function (cb) {
 	del([config.dest], cb);
 });
 
+// slim
+gulp.task('slim', function(){
+  gulp.src("./src/views/pages/*.slim")
+    .pipe(slim({
+      pretty: true,
+      compile: true
+    }))
+    .pipe(gulp.dest("./dist/pages/"));
+});
 
 // styles
 gulp.task('styles:fabricator', function () {
@@ -167,6 +176,7 @@ gulp.task('default', ['clean'], function () {
 
 	// define build tasks
 	var tasks = [
+		'slim',
 		'styles',
 		'scripts',
 		'images',

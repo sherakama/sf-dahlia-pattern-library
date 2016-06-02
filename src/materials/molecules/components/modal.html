@@ -12,6 +12,10 @@
         </ul>
         <p class="t-small t-bold">A total of 900 tickets were drawn in this lottery.</p>
       </hgroup>
+
+      <div class="padding-left--2x padding-right--2x">
+        {{> forms.icon-input }}
+      </div>
     </div>
 
     <div class="medium-6 medium-pull-6 columns">
@@ -36,7 +40,7 @@
 
   <!-- <a class="close-reveal-modal" aria-label="Close"> -->
   <a class="close-reveal-modal" aria-label="Close"  ng-click="closeModal()">
-    Close {{> icons.base icon="close" size="small" fill="primary"}}
+    <span class="sr-only">Close</span> {{> icons.base icon="close" size="medium" fill="primary"}}
   </a>
 
 </div>

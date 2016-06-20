@@ -71,9 +71,9 @@ accordion.has-toggle,
 }
 
 .accordion-stat {
-  @include absolute(50%,2.5rem,null,null);
+  @include absolute(1rem,2.5rem,null,null);
   // @include translateY(-50%);
-  transform: translateY(-50%);
+  // transform: translateY(-50%);
   text-align: center;
 }
 

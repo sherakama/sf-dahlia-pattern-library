@@ -22,7 +22,9 @@
     }
 
     &_subheader {
-      @extend .accordion-subheader;
+      @include responsive-text-size('small');
+      @include type-weight(regular);
+      display: block;
       color: $steel;
     }
   }

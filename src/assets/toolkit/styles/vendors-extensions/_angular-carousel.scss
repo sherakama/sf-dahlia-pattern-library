@@ -14,7 +14,7 @@ $carousel-arrow-size: 3.5rem;
     z-index: 3;
 
     button {
-      @include translateY(-50%);
+      transform: translateY(-50%);
       border-radius: 0;
       margin-bottom: 0;
       padding: 1rem;

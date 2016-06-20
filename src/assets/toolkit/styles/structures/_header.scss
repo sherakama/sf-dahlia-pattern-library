@@ -5,6 +5,7 @@
 @mixin image-replace($imageURL) {
   background: url($imageURL) no-repeat;
   overflow: hidden;
+  text-indent: -9999px;
 }
 
 // Top Bar
@@ -51,7 +52,7 @@
   }
 
   a {
-    @include hide-text(left);
+    // @include hide-text(left);
     @include image-replace("../images/logo-portal.png");
     background-position: center left;
     background-size: auto 100%;

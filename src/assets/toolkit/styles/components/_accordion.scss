@@ -34,3 +34,11 @@
     @include absolute(1rem,1rem,null,null);
   }
 }
+
+.accordion-container {
+  &.expanded-content {
+    .content {
+      padding: 0;
+    }
+  }  
+}

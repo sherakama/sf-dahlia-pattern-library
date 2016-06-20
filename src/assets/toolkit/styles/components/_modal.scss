@@ -2,35 +2,18 @@
 // Modals
 
 .reveal-modal {
-  background-color: #eee;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 10px;
+
+  &.modal-small {
+    max-width: 25rem;
+  }
 }
 
 // Scrolling panel
 .overflow-panel {
   border: 1px solid $smoke;
   
-  &_header {
-    @include responsive-text-size('tiny');
-    @include type-weight(bold);
-    background-color: $smoke;
-    overflow: hidden;
-    text-transform: uppercase;
-
-    .header {
-      padding: .75rem;
-    }
-  }
-
-  &_scroll {
-    background-color: #fff;
-    position: relative;
-
-    @media #{$medium-up} {
-      max-height: rem-calc(500);
-      overflow-y: auto;
-    }
-  }
-
   .result-set li {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -42,7 +25,43 @@
   }
 }
 
+.overflow-panel_header {
+  @include responsive-text-size('tiny');
+  @include type-weight(bold);
+  background-color: $smoke;
+  overflow: hidden;
+  text-transform: uppercase;
+
+  .header {
+    padding: .75rem;
+  }
+}
+
+.overflow-panel_scroll {
+  background-color: #fff;
+  position: relative;
+
+  @media #{$medium-up} {
+    max-height: rem-calc(450);
+    overflow-y: auto;
+  }
+}
+
+.modal-overflow {
+  @media #{$medium-up} {
+    max-height: rem-calc(700);
+    overflow-y: auto;
+  }  
+}
+
+.message-modal {
+  padding: 2rem;
+}
+
+
 // Close button
 .close-reveal-modal {
+  @include absolute(1.5rem,1.5rem,null,null);
   text-transform: uppercase;
 }
+

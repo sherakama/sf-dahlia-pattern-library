@@ -3,7 +3,7 @@
     <header class="padding-top padding-left">
       <h2 class="h-caps-lined no-margin">Housing Preferences</h2>
     </header>
-    <div class="padding padding-bottom-none">
+    <div class="padding">
       <p class="no-margin">Ranking in these lists is considered before the General List.</p>
     </div>
 
@@ -18,9 +18,7 @@
           <p class="t-small no-margin">These applicants will be considered for up to 50 units</p>
         </div>
         <div class="overflow-panel">
-          <div class="overflow-panel_scroll">
           {{> tables.table--results }}
-          </div>
         </div>
       </accordion-group>
       
@@ -34,9 +32,7 @@
           <p class="t-small no-margin">These applicants will be considered for up to 10 units</p>
         </div>
         <div class="overflow-panel">
-          <div class="overflow-panel_scroll">
           {{> tables.table--results }}
-          </div>
         </div>
       </accordion-group>
       
@@ -50,9 +46,7 @@
           <p class="t-small no-margin">These applicants will be considered for up to 20 units</p>
         </div>
         <div class="overflow-panel">
-          <div class="overflow-panel_scroll">
           {{> tables.table--results }}
-          </div>
         </div>
       </accordion-group>
 
@@ -66,16 +60,14 @@
           <p class="t-small no-margin">These applicants will be considered for any remaining units</p>
         </div>
         <div class="overflow-panel">
-          <div class="overflow-panel_scroll">
           {{> tables.table--results }}
-          </div>
         </div>
       </accordion-group>
     </accordion>
   </section>
 
   <header class="padding-top padding-left">
-    <h2 class="h-caps-lined no-margin">General List</h2>
+    <h2 class="h-caps-lined">General List</h2>
   </header>
 
   <accordion close-others="oneAtATime" class="accordion-container has-stat expanded-content">
@@ -86,9 +78,7 @@
         {{> icons.base icon="arrow-down" size="small" position="control"}}
       </accordion-heading>
       <div class="overflow-panel">
-        <div class="overflow-panel_scroll">
         {{> tables.table--results }}
-        </div>
       </div>
     </accordion-group>
   </accordion>

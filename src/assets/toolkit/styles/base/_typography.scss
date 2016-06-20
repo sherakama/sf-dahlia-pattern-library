@@ -120,3 +120,24 @@ hr {
     margin: 2rem 0;
   }
 }
+
+@mixin h-caps($border-bottom: 0) {
+  @include type-weight(bold);
+  border-bottom: $border-bottom solid $primary;
+  display: inline-block;
+  font-family: $alt-font-family;
+  letter-spacing: $small-header-spacing;
+  text-transform: uppercase;
+}
+
+.h-caps-lined {
+  @include h-caps($border-bottom: 3px);
+  @include responsive-text-size('small');
+  margin-top: -.25rem;
+  vertical-align: top;
+  padding-bottom: 1rem;
+}
+
+.h-caps {
+  @include h-caps();
+}

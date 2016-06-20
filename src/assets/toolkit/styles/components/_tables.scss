@@ -1,3 +1,79 @@
+table {
+  width: 100%;
+
+  thead {
+    tr {
+      th {
+        font-weight: $table-value-weight;
+
+        border-bottom: 1px solid $primary;
+        text-transform: uppercase;
+
+        @media #{$small-only} {
+          padding-left: $table-padding-small;
+          padding-right: $table-padding-small;
+        }  
+      }
+    }
+  }  
+
+  tbody { 
+    tr {
+      td {
+        font-weight: $table-value-weight;
+
+        @media #{$small-only} {
+          padding-left: $table-padding-small;
+          padding-right: $table-padding-small;
+        }
+      }
+    }
+  }
+
+  small {
+    font-weight: 400;  
+  }
+
+  &.table-small {
+    tr th {
+      background-color: $dust;
+      border-bottom: 0;
+      padding: .75rem;
+    }
+
+    tr td {
+      background: transparent;
+      border-bottom: 1px solid $smoke;
+      padding: .75rem;
+    }
+
+    tr {
+      background: transparent
+    }
+  }
+
+  &.table-results {
+    tr th {
+      color: $deep;
+    }
+
+    tr th,
+    tr td {
+      text-align: center;
+      
+      &:first-child {
+        padding-left: 3rem;
+      }
+
+      &:last-child {
+        padding-right: 3rem;
+      }
+    }
+  }
+}
+
+
+
 //
 // Result set
 // List psuedo table

@@ -1,0 +1,89 @@
+// smaller screen listing accordion headers
+accordion.has-icon,
+.page-accordion {
+  .accordion dd > a {
+    min-height: 5rem;
+    padding-left: 5rem;
+  }
+}
+
+accordion.has-stat {
+  .accordion dd > a {
+    min-height: 5rem;
+    padding-right: 6rem;
+  }
+}
+
+accordion.has-toggle,
+.accordion-container,
+.page-accordion {
+  .accordion dd > a {
+    border-bottom: 1px solid $smoke;
+    display: block;
+    position: relative;
+
+    &.active {
+      background-color: $mist;
+
+      .ui-control {
+        transform: rotate(180deg);
+      }
+    }
+
+    .ui-control {
+      @include absolute(1rem,1rem,null,null);
+    }
+  }
+}
+
+.accordion-name {
+  @include responsive-text-size('small');
+  font-family: $alt-font-family;
+  letter-spacing: $small-header-spacing;
+  margin-bottom: .5rem;
+  margin-right: 1rem;
+  text-transform: uppercase;
+
+  &.semi {
+    letter-spacing: normal;
+    font-family: $sans-font-family;
+    font-weight: $t-semi;
+    margin-bottom: 0;
+  }
+}
+
+.accordion-subheader {
+  @include responsive-text-size('small');
+  display: inline-block;
+  line-height: 1.375;
+  margin-right: 1rem;
+
+  &.tiny {
+    @include responsive-text-size('tiny');
+  }
+}
+
+.accordion-icon {
+  @include absolute(50%,null,null,.5rem);
+  // @include translateY(-50%);
+  transform: translateY(-50%);
+  width: 3.5rem;
+}
+
+.accordion-stat {
+  @include absolute(50%,2.5rem,null,null);
+  // @include translateY(-50%);
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.accordion-stat_label {
+  @include responsive-text-size('micro');
+  text-transform: uppercase;
+}
+
+.accordion-stat_value {
+  @include responsive-text-size('gamma');
+  display: block;
+  font-family: $serif-font-family;
+}

@@ -1,37 +1,31 @@
 <div ng-controller="ModalController" aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
 
   <section class="results-container">
+    <hgroup class="text-center padding--2x padding-bottom-none">
+      <h1 class="t-gamma margin-bottom--half">Lottery Results</h1>
+      <h2 id="modalTitle" class="t-caps t-small t-alt-sans t-bold">Potrero 1010</h1>
+      <p class="t-small">3000 applications were submitted for 50 avaiable units</p>
+      <p class="t-small margin-bottom">Studio 20 units, 1 Bedroom 20 units, 2 Bedrooms 10 units</p>
+      </p>
 
-      <hgroup class="text-center padding--2x padding-bottom-none">
-        <h1 class="t-gamma margin-bottom--half">Lottery Results</h1>
-        <h2 id="modalTitle" class="t-caps t-small t-alt-sans t-bold">Potrero 1010</h1>
-        <p class="t-small">3000 applications were submitted for 50 avaiable units</p>
-        <p class="t-small margin-bottom">Studio 20 units, 1 Bedroom 20 units, 2 Bedrooms 10 units</p>
-        </p>
+      <div class="">
+      {{> forms.icon-input }}
 
-        <div class="">
-        {{> forms.icon-input }}
-
-        <p class="t-small">Lottery results are divided into multiple lists. Please check each one in order to confirm your ranking.</p>
-        </div>
-      
-      </hgroup>
-    </div>
+      <p class="t-small">Lottery results are divided into multiple lists. Please check each one in order to confirm your ranking.</p>
+      </div>
+    
+    </hgroup>
     
     <div class="modal-overflow">
       {{> results-accordion }}
-
-    <!-- <div class="overflow-panel">
-      <div class="overflow-panel_scroll">
-        {{> tables.table--results }}
-      </div>
-    </div> -->
-
+      <p class="text-center t-small padding--2x no-margin"><a href="#">Download Unsorted Results</a></p>
+    </div>
+    <footer class="text-center">
+      <p class="t-small c-steel no-margin">Results Updated: February 21, 2016</p>
+    </footer>
   </section>
 
-  <!-- <a class="close-reveal-modal" aria-label="Close"> -->
   <a class="close-reveal-modal" aria-label="Close"  ng-click="closeModal()">
     <span class="sr-only">Close</span> {{> icons.base icon="close" size="medium" fill="primary"}}
   </a>
-
 </div>

@@ -49,7 +49,7 @@
 
 .modal-overflow {
   @media #{$medium-up} {
-    max-height: rem-calc(700);
+    max-height: rem-calc(720);
     overflow-y: auto;
   }  
 }

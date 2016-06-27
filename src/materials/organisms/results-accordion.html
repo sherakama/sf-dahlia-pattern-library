@@ -8,63 +8,26 @@
     </div>
 
     <accordion close-others="oneAtATime" class="results-accordion accordion-container expanded-content">
-      <accordion-group>
-        <accordion-heading>
-          <h3 class="accordion-name semi">Certificate of Preference</h3>
-          <span class="accordion-subheader tiny">up to 50 units available</span>
-          {{> icons.base icon="arrow-down" size="small" position="control"}}
-        </accordion-heading>
-        <div class="padding">
-          <p class="t-small no-margin">10 applicants qualified for this preference</p>
-        </div>
-        <div class="overflow-panel">
-          {{> tables.table--results }}
-        </div>
-      </accordion-group>
-      
-      <accordion-group>
-        <accordion-heading>
-          <h3 class="accordion-name semi">Displaced Tenants Housing Preference</h3>
-          <span class="accordion-subheader tiny">up to 10 units available</span>
-          {{> icons.base icon="arrow-down" size="small" position="control"}}
-        </accordion-heading>
-        <div class="padding">
-          <p class="t-small no-margin">15 applicants qualified for this preference</p>
-        </div>
-        <div class="overflow-panel">
-          {{> tables.table--results }}
-        </div>
-      </accordion-group>
-      
-      <accordion-group>
-        <accordion-heading>
-          <h3 class="accordion-name semi">Neighborhood Resident Housing Preference</h3>
-          <span class="accordion-subheader tiny">up to 20 units available</span>
-          {{> icons.base icon="arrow-down" size="small" position="control"}}
-        </accordion-heading>
-        <div class="padding">
-          <p class="t-small">1200 applicants qualified for this preference. Showing first 1000 applicants.</p>
-          <p class="t-small no-margin"><a href="#">Download Full Preference List</a></p>
-        </div>
-        <div class="overflow-panel">
-          {{> tables.table--results }}
-        </div>
-      </accordion-group>
 
+      {{#each lotteries.buckets}}
       <accordion-group>
         <accordion-heading>
-          <h3 class="accordion-name semi">Live/Work Preference</h3>
-          <span class="accordion-subheader tiny">at least 10 units available</span>
+          <h3 class="accordion-name semi">{{name}}</h3>
+          <span class="accordion-subheader tiny">{{units}}</span>
           {{> icons.base icon="arrow-down" size="small" position="control"}}
         </accordion-heading>
         <div class="padding">
-          <p class="t-small">2800 applicants qualified for this preference. Showing first 1000 applicants.</p>
+          <p class="t-small no-margin">{{applicants}}</p>
+          {{#if download}}
           <p class="t-small no-margin"><a href="#">Download Full Preference List</a></p>
+          {{/if}}
         </div>
         <div class="overflow-panel">
           {{> tables.table--results }}
         </div>
       </accordion-group>
+      {{/each}}
+
     </accordion>
   </section>
 

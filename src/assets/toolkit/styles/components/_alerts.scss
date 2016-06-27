@@ -3,22 +3,30 @@
 //
 
 .alert-box {
+
+  &.invert {
+    color: $white;
+
+    svg use {
+      fill: $white;
+    }
+
+    .close {
+      color: $white;
+    }
+  }
+
   &.alert {
     background-color: $alert-tint;
 
     &.invert {
       background-color: $alert;
-      color: $white;
-
-      svg use {
-        fill: $white;
-      }
-
-      .close {
-        color: $white;
-      }
     }
   }
+
+  &.primary {
+    background-color: $primary-tint;
+  }  
 
   &.success {
     background-color: $success-tint;
@@ -40,7 +48,7 @@
 }
 
 .alert-body {
-  @include scut-padding(n 2rem);
+  @include scut-padding(n .5rem n 2rem);
   margin-bottom: 0;
 }
 

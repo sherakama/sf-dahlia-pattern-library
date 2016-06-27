@@ -7,11 +7,19 @@
   </thead>
 
   <tbody>
-    {{#each results.bluxome}}
+    {{#each items }}
     <tr>
-      <td scope="row">{{rank}}</td>
-      <td>{{ticket}}</td>
+      <td scope="row">{{this.rank}}</td>
+      <td>{{this.ticket}}</td>
     </tr>
-    {{/each}}
+    {{else }}
+      {{#each results.bluxome }}
+        <tr>
+          <td scope="row">{{this.rank}}</td>
+          <td>{{this.ticket}}</td>
+        </tr>
+      {{/each }}
+
+    {{/each}}  
   </tbody>
 </table>
